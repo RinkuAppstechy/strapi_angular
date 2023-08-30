@@ -9,5 +9,21 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'http:', 'https:'],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
   
 ];
+
+
+
