@@ -49,6 +49,10 @@ app.post('/send-email', (req, res) => {
     });
 });
 
+app.get('', (req, res) =>{
+    res.send("Running Successfully!!!");
+})
+
 // Use environment variable for the production port.
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
